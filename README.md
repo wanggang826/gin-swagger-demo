@@ -4,16 +4,15 @@
 gin 结合 swagger简单封装，方便开箱即用，API服务及接口文档
 
 ### 目录
-1.admin          -- 管理后台api
-2.app            -- 客户端api
-3.conf           -- 配置文件
-4.docs           -- 文档
-5.middleware     -- 中间件
-6.models         -- 数据层
-7.pkg            -- 一些工具包
-7.1  setting      --初始化
-8.routers        --路由（多模块 如:admin、app）
-9.service        -- 方便api与models交互
+1. admin          -- 管理后台api
+2. app            -- 客户端api
+3. conf           -- 配置文件
+4. docs           -- 文档
+5. middleware     -- 中间件
+6. models         -- 数据层
+7. pkg            -- 一些工具包
+8. routers        --路由（多模块 如:admin、app）
+9. service        -- 方便api与models交互
 
 ### swagger 
 1.go get -u github.com/swaggo/swag/cmd/swag
