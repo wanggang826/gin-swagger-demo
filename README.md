@@ -13,6 +13,7 @@ gin 结合 swagger简单封装，方便开箱即用，API服务及接口文档
 7. pkg            -- 一些工具包
 8. routers        --路由（多模块 如:admin、app）
 9. service        -- 方便api与models交互
+10. sql           -- 示例sql
 
 ### swagger 
 1. go get -u github.com/swaggo/swag/cmd/swag
