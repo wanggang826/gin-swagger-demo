@@ -1,0 +1,29 @@
+[app]
+PageSize = 10
+JwtUserSecret = UnL1I5gtaV3AT1P4UMEhA4BNL1mUQAeOVjutN7w
+JwtAdminSecret = mF1KnaiIYdbuDUy3XZr674TQteARvlPMfx8SWEk
+PrefixUrl = http://127.0.0.1:8000
+RuntimeRootPath = runtime/
+LogSavePath = logs/
+
+[server]
+#debug or release
+RunMode = debug
+HttpPort = 8000
+ReadTimeout = 60
+WriteTimeout = 60
+
+[database]
+Type = mysql
+User = user
+Password = password
+Host = 127.0.0.1:3306
+Name = test
+TablePrefix =
+
+[redis]
+Host = 127.0.0.1:6379
+Password =
+MaxIdle = 30
+MaxActive = 30
+IdleTimeout = 200

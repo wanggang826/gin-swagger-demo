@@ -1,37 +1,50 @@
-# gin-swagger-demo
+##gin-swagger-demo
 
-#### 介绍
-gin-swagge-demo  简单封装 API 服务及接口文档开箱即用
+### 介绍
+gin 结合 swagger简单封装，方便开箱即用，API服务及接口文档
 
-#### 软件架构
-软件架构说明
+### 目录
+admin          -- 管理后台api
+app            -- 客户端api
+conf           -- 配置文件
+docs           -- 文档
+middleware     -- 中间件
+models         -- 数据层
+pkg            -- 一些工具包
+  setting      --初始化
+routers        --路由（多模块 如:admin、app）
+service        -- 方便api与models交互
+
+### swagger 
+go get -u github.com/swaggo/swag/cmd/swag
+swag init  // 注意，一定要和main.go处于同一级目录
+初始化命令，在根目录生成一个docs文件夹
+
+### gin
+go get -u github.com/gin-gonic/gin
+
+### 项目安装
+1. git clone https://gitee.com/wanggang826/gin-swagger-demo.git
+2. go mod tidy
+4. 修改配置: 复制配置文件config/app.ini.example 为config/app.ini，并修改其中配置
+5. 非热更新启动: go run main.go,
+6. 热更新启动 ：避免每次改代码手工重启服务
+```
+go get github.com/pilu/fresh
+使用 fresh 启动服务： 项目根目录下执行： fresh
+
+```
+7.测试接口,浏览器访问： localhost:8000/ping
+8.本地需要有 mysql 和 redis
+
+### 调试
+1. 日志文件保存在 ：runtime/logs 目录下
+2. 可以单步调试，golang 或者 vscode 都可以，vscode 单步时，记得在 vscode 中当前打开文件是 main.go，否没办法启动调试
+
+### xorm
+1.xorm 文档地址： https://gobook.io/read/gitea.com/xorm/manual-zh-CN/
+2.xorm坑  where = 0 
+3.created 、updated、deleted xorm auto 可控
 
 
-#### 安装教程
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
-
-
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
