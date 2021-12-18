@@ -4,21 +4,21 @@
 gin 结合 swagger简单封装，方便开箱即用，API服务及接口文档
 
 ### 目录
-admin          -- 管理后台api
-app            -- 客户端api
-conf           -- 配置文件
-docs           -- 文档
-middleware     -- 中间件
-models         -- 数据层
-pkg            -- 一些工具包
-  setting      --初始化
-routers        --路由（多模块 如:admin、app）
-service        -- 方便api与models交互
+#### admin          -- 管理后台api
+#### app            -- 客户端api
+#### conf           -- 配置文件
+#### docs           -- 文档
+#### middleware     -- 中间件
+#### models         -- 数据层
+#### pkg            -- 一些工具包
+#####  setting      --初始化
+#### routers        --路由（多模块 如:admin、app）
+#### service        -- 方便api与models交互
 
 ### swagger 
-go get -u github.com/swaggo/swag/cmd/swag
-swag init  // 注意，一定要和main.go处于同一级目录
-初始化命令，在根目录生成一个docs文件夹
+1.go get -u github.com/swaggo/swag/cmd/swag
+2.swag init  // 注意，一定要和main.go处于同一级目录
+3.初始化命令，在根目录生成一个docs文件夹
 
 ### gin
 go get -u github.com/gin-gonic/gin
